@@ -27,8 +27,12 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Run the app container on port 8081
-                bat 'docker run -d -p 8081:8081 --name webappdemo webappdemo'
+                // Remove any existing container named webappdemo before deployment
+                // This avoids port conflicts and ensures the new container starts cleanly.
+                bat '''
+                docker rm -f webappdemo || echo No existing container to remove
+                docker run -d -p 8082:8081 --name webappdemo webappdemo
+                '''
             }
         }
     }
