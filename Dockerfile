@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk-slim
+FROM openjdk:17
 
 # Copy the generated WAR file into the container
 COPY target/webappdemo-1.0.war /app.war
