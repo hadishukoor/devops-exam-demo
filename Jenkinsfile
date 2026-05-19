@@ -29,7 +29,7 @@ pipeline {
             steps {
                 bat '''
                 docker rm -f webappdemo || echo No existing container to remove
-                docker run -d -p 8083:8081 --name webappdemo webappdemo
+                docker run -d -p 8081:8081 --name webappdemo webappdemo
                 '''
             }
         }
