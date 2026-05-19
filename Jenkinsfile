@@ -14,7 +14,7 @@ pipeline {
         stage('Maven Build') {
             steps {
                 // Build the WAR file using Maven
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
