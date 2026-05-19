@@ -1,7 +1,15 @@
-FROM alpine:latest
+# FROM alpine:latest
 
-RUN mkdir /coursedata
+# RUN mkdir /coursedata
 
-WORKDIR /coursedata
+# WORKDIR /coursedata
 
-CMD ["sh"]
+# CMD ["sh"]
+
+# # Run the Java application from the WAR file
+# # CMD ["java", "-jar", "app.war"]
+
+# # FROM ubuntu:latest
+# # RUN apt update && apt install -y curl
+# # RUN mkdir /project
+# # CMD ["bash"]

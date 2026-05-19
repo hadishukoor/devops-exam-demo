@@ -18,6 +18,6 @@ class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "DevOps Exam Practice App";
+        return "Devops endterm Submission using Jenkis Workflow";
     }
 }
