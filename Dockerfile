@@ -7,6 +7,9 @@ WORKDIR /app
 COPY target/*.war app.war
 
 
-EXPOSE 8082
+EXPOSE 8081
 
-CMD ['java', '-jar', 'app.war']
+
+CMD ["java", "-jar", "app.war"]
+
+
