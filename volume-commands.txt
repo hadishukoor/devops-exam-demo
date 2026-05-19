@@ -1,0 +1,26 @@
+# Create Volume
+docker volume create appdata_vol
+
+# Run Container With Volume
+docker run -dit \
+--name storage_container1 \
+-v appdata_vol:/appdata \
+alpine sh
+
+# Enter Container
+docker exec -it storage_container1 sh
+
+# Create File
+echo "hello" > /appdata/data.txt
+
+# Remove Container
+docker rm -f storage_container1
+
+# Create Second Container
+docker run -dit \
+--name storage_container2 \
+-v appdata_vol:/appdata \
+alpine sh
+
+# Verify Persistence
+cat /appdata/data.txt

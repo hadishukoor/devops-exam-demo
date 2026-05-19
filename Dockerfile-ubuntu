@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+
+RUN apt update && apt install -y curl
+
+RUN mkdir /project
+
+RUN echo "DevOps Exam" > /project/info.txt
+
+WORKDIR /project
+
+CMD ["bash"]

@@ -1,0 +1,4 @@
+Checkout stage: get source code
+Maven Build stage: mvn clean package
+Docker Build stage: docker build -t image .
+Deploy stage: run container on port 8081

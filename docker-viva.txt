@@ -1,0 +1,5 @@
+Image vs Container
+CMD vs ENTRYPOINT
+Volume vs Bind Mount
+Pull vs Build
+Bridge vs Host Network

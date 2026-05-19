@@ -1,0 +1,36 @@
+# Pull Image
+docker pull nginx
+
+# Run Container
+docker run -d --name web nginx
+
+# Port Mapping
+docker run -d -p 8080:80 nginx
+
+# List Containers
+docker ps
+docker ps -a
+
+# List Images
+docker images
+
+# Stop Container
+docker stop web
+
+# Remove Container
+docker rm web
+
+# Remove Image
+docker rmi nginx
+
+# Execute Inside Container
+docker exec -it web sh
+
+# Build Image
+docker build -t myimage .
+
+# Image History
+docker history myimage
+
+# Logs
+docker logs web
