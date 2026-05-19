@@ -21,14 +21,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 // Build the Docker image from the Dockerfile
-                sh 'docker build -t webappdemo .'
+                bat 'docker build -t webappdemo .'
             }
         }
 
         stage('Deploy') {
             steps {
                 // Run the app container on port 8081
-                sh 'docker run -d -p 8081:8081 --name webappdemo webappdemo'
+                bat 'docker run -d -p 8081:8081 --name webappdemo webappdemo'
             }
         }
     }
